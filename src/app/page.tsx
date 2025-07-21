@@ -53,10 +53,10 @@ export default function Home() {
                   <strong>Is your elderly parent traveling alone?</strong> Many Nepali parents travel between the US and Nepal alone, and families worry about their safety and comfort during long international flights.
                 </p>
                 <p>
-                  <strong>We help you find a companion</strong> - a young Nepali traveler who's already on the same flight and willing to help. They can assist with forms, language barriers, or simply provide company during the journey.
+                  <strong>We help you find a companion</strong> - a young Nepali traveler who&apos;s already on the same flight and willing to help. They can assist with forms, language barriers, or simply provide company during the journey.
                 </p>
                 <p>
-                  <strong>It's completely free</strong> and no registration required. Just fill out a simple form with your parent's flight details, and we'll connect you with potential companions.
+                  <strong>It&apos;s completely free</strong> and no registration required. Just fill out a simple form with your parent&apos;s flight details, and we&apos;ll connect you with potential companions.
                 </p>
               </div>
             </div>
@@ -69,10 +69,10 @@ export default function Home() {
               </h4>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  <strong>Want to help our community?</strong> If you're already traveling between the US and Nepal, you can make a big difference by offering companionship to elderly travelers.
+                  <strong>Want to help our community?</strong> If you&apos;re already traveling between the US and Nepal, you can make a big difference by offering companionship to elderly travelers.
                 </p>
                 <p>
-                  <strong>It's simple and meaningful</strong> - just let us know your flight details, and we'll match you with families looking for help. You might help someone's parent feel safer and more comfortable during their journey.
+                  <strong>It&apos;s simple and meaningful</strong> - just let us know your flight details, and we&apos;ll match you with families looking for help. You might help someone&apos;s parent feel safer and more comfortable during their journey.
                 </p>
                 <p>
                   <strong>No obligation</strong> - you can choose to help or not. Even small gestures like helping with forms or just being there for conversation can make a huge difference.
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">🤝</div>
-                <p><strong>Community Support</strong><br/>Young Nepalis helping elders - it's our cultural value of respecting and caring for seniors</p>
+                <p><strong>Community Support</strong><br/>Young Nepalis helping elders - it&apos;s our cultural value of respecting and caring for seniors</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">💝</div>
@@ -116,7 +116,7 @@ export default function Home() {
               }`}
             >
               <Users className="h-5 w-5 inline mr-2" />
-              I'm a Parent / Family Member
+              I&apos;m a Parent / Family Member
             </button>
             <button
               onClick={() => setActiveTab('companion')}
@@ -127,7 +127,7 @@ export default function Home() {
               }`}
             >
               <Heart className="h-5 w-5 inline mr-2" />
-              I'm a Companion
+              I&apos;m a Companion
             </button>
           </div>
 
@@ -157,15 +157,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-gray-700 italic">
-                "Found a wonderful companion for my mom's flight from Dallas to Kathmandu. 
-                She felt so much safer and more comfortable during the journey."
+                &quot;Found a wonderful companion for my mom&apos;s flight from Dallas to Kathmandu. 
+                She felt so much safer and more comfortable during the journey.&quot;
               </p>
               <p className="text-sm text-gray-500 mt-2">- Priya S., Dallas</p>
             </div>
             <div className="bg-green-50 rounded-lg p-4">
               <p className="text-gray-700 italic">
-                "I was happy to help an elderly uncle on my flight to Nepal. 
-                It felt great to give back to our community."
+                &quot;I was happy to help an elderly uncle on my flight to Nepal. 
+                It felt great to give back to our community.&quot;
               </p>
               <p className="text-sm text-gray-500 mt-2">- Raj K., New York</p>
             </div>

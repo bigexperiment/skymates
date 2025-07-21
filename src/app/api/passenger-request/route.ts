@@ -14,7 +14,6 @@ export async function POST(request: NextRequest) {
       airline,
       date,
       time,
-      needs,
       notes
     } = body;
 
