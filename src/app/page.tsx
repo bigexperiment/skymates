@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b border-zinc-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center">
             <Plane className="h-8 w-8 text-blue-600 mr-3" />
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
 
           {/* Form Content */}
-          <div className="p-6">
+          <div className="p-6 bg-white">
             {activeTab === 'passenger' ? (
               <PassengerForm />
             ) : (
@@ -265,7 +265,7 @@ function PassengerForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="Your full name"
           />
         </div>
@@ -278,7 +278,7 @@ function PassengerForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="your.email@example.com"
           />
         </div>
@@ -294,7 +294,7 @@ function PassengerForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="+1 (555) 123-4567"
           />
         </div>
@@ -308,7 +308,7 @@ function PassengerForm() {
             required
             value={formData.passengerName}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="Name of the person traveling"
           />
         </div>
@@ -325,7 +325,7 @@ function PassengerForm() {
             required
             value={formData.from}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="e.g., Dallas (DFW)"
           />
         </div>
@@ -339,7 +339,7 @@ function PassengerForm() {
             required
             value={formData.to}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
             placeholder="e.g., Kathmandu (KTM)"
           />
         </div>
@@ -355,7 +355,7 @@ function PassengerForm() {
             required
             value={formData.airline}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           >
             <option value="">Select airline</option>
             <option value="Qatar Airways">Qatar Airways</option>
@@ -376,7 +376,7 @@ function PassengerForm() {
             required
             value={formData.date}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           />
         </div>
         <div>
@@ -388,7 +388,7 @@ function PassengerForm() {
             name="time"
             value={formData.time}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           />
         </div>
       </div>
@@ -404,7 +404,7 @@ function PassengerForm() {
           value={formData.notes}
           onChange={handleChange}
           rows={3}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
           placeholder="Any additional information about the passenger or specific needs..."
         />
       </div>
@@ -488,7 +488,7 @@ function CompanionForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
             placeholder="Your full name"
           />
         </div>
@@ -502,7 +502,7 @@ function CompanionForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
             placeholder="your.email@example.com"
           />
         </div>
@@ -517,7 +517,7 @@ function CompanionForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
           placeholder="+1 (555) 123-4567"
         />
       </div>
@@ -533,7 +533,7 @@ function CompanionForm() {
             required
             value={formData.from}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
             placeholder="e.g., Dallas (DFW)"
           />
         </div>
@@ -547,7 +547,7 @@ function CompanionForm() {
             required
             value={formData.to}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
             placeholder="e.g., Kathmandu (KTM)"
           />
         </div>
@@ -563,7 +563,7 @@ function CompanionForm() {
             required
             value={formData.airline}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
           >
             <option value="">Select airline</option>
             <option value="Qatar Airways">Qatar Airways</option>
@@ -584,7 +584,7 @@ function CompanionForm() {
             required
             value={formData.date}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
           />
         </div>
         <div>
@@ -596,7 +596,7 @@ function CompanionForm() {
             name="time"
             value={formData.time}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
           />
         </div>
       </div>
@@ -612,7 +612,7 @@ function CompanionForm() {
           value={formData.notes}
           onChange={handleChange}
           rows={3}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
           placeholder="Any additional information about your willingness to help..."
         />
       </div>
