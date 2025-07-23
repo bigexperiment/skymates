@@ -7,10 +7,10 @@ export async function GET(request: NextRequest) {
     const type = searchParams.get('type');
 
     if (type === 'passenger') {
-      // Fetch recent passenger requests (only flight details, no personal info)
+      // Fetch recent passenger requests (all fields except email and phone)
       const { data, error } = await supabase
         .from('passenger_requests')
-        .select('id, from_location, to_location, airline, flight_date, created_at')
+        .select('id, name, from_location, to_location, airline, flight_date, notes, created_at')
         .order('created_at', { ascending: false })
         .limit(10);
 
@@ -25,10 +25,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ data });
 
     } else if (type === 'companion') {
-      // Fetch recent companion signups (only flight details, no personal info)
+      // Fetch recent companion signups (all fields except email and phone)
       const { data, error } = await supabase
         .from('companion_signups')
-        .select('id, from_location, to_location, airline, flight_date, created_at')
+        .select('id, name, from_location, to_location, airline, flight_date, notes, created_at')
         .order('created_at', { ascending: false })
         .limit(10);
 

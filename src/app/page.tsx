@@ -40,9 +40,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
             How Skymates Works
           </h3>
-          
           <div className="grid md:grid-cols-2 gap-8">
-            {/* For Families */}
             <div className="space-y-4">
               <h4 className="text-xl font-medium text-blue-700 flex items-center">
                 <Users className="h-6 w-6 mr-2" />
@@ -50,18 +48,13 @@ export default function Home() {
               </h4>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  <strong>Is your elderly parent traveling alone?</strong> Many Nepali parents travel between the US and Nepal alone, and families worry about their safety and comfort during long international flights.
+                  Traveling parent? Post flight details. We’ll help find a Nepali companion on the same flight.
                 </p>
                 <p>
-                  <strong>We help you find a companion</strong> - a young Nepali traveler who&apos;s already on the same flight and willing to help. They can assist with forms, language barriers, or simply provide company during the journey.
-                </p>
-                <p>
-                  <strong>It&apos;s completely free</strong> and no registration required. Just fill out a simple form with your parent&apos;s flight details, and we&apos;ll connect you with potential companions.
+                  No login, no hassle. Just fill the form and we’ll connect you if there’s a match.
                 </p>
               </div>
             </div>
-
-            {/* For Travelers */}
             <div className="space-y-4">
               <h4 className="text-xl font-medium text-green-700 flex items-center">
                 <Heart className="h-6 w-6 mr-2" />
@@ -69,35 +62,30 @@ export default function Home() {
               </h4>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  <strong>Want to help our community?</strong> If you&apos;re already traveling between the US and Nepal, you can make a big difference by offering companionship to elderly travelers.
+                  Flying soon? Sign up as a companion. Help a fellow Nepali traveler feel safe and supported.
                 </p>
                 <p>
-                  <strong>It&apos;s simple and meaningful</strong> - just let us know your flight details, and we&apos;ll match you with families looking for help. You might help someone&apos;s parent feel safer and more comfortable during their journey.
-                </p>
-                <p>
-                  <strong>No obligation</strong> - you can choose to help or not. Even small gestures like helping with forms or just being there for conversation can make a huge difference.
+                  It’s quick, easy, and a great way to give back to our community.
                 </p>
               </div>
             </div>
           </div>
-
-          {/* Why This Matters */}
           <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg border border-blue-200">
             <h5 className="text-lg font-semibold text-gray-900 mb-3 text-center">
-              Why This Matters for Our Nepali Community
+              Why It Matters
             </h5>
             <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
               <div className="text-center">
                 <div className="text-2xl mb-2">🛫</div>
-                <p><strong>Safer Travel</strong><br/>Elderly parents feel more secure with a companion on long international flights</p>
+                <p><strong>Safer Travel</strong><br/>Elders feel secure with a companion</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">🤝</div>
-                <p><strong>Community Support</strong><br/>Young Nepalis helping elders - it&apos;s our cultural value of respecting and caring for seniors</p>
+                <p><strong>Community</strong><br/>Nepalis helping Nepalis</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">💝</div>
-                <p><strong>Peace of Mind</strong><br/>Families can relax knowing their parents have support during their journey</p>
+                <p><strong>Peace of Mind</strong><br/>Families can relax</p>
               </div>
             </div>
           </div>
@@ -271,11 +259,12 @@ function PassengerForm() {
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Email (optional)
+            Email *
           </label>
           <input
             type="email"
             name="email"
+            required
             value={formData.email}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
@@ -287,11 +276,12 @@ function PassengerForm() {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Phone (optional)
+            Phone *
           </label>
           <input
             type="tel"
             name="phone"
+            required
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
@@ -350,21 +340,15 @@ function PassengerForm() {
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Airline *
           </label>
-          <select
+          <input
+            type="text"
             name="airline"
             required
             value={formData.airline}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
-          >
-            <option value="">Select airline</option>
-            <option value="Qatar Airways">Qatar Airways</option>
-            <option value="Emirates">Emirates</option>
-            <option value="Turkish Airlines">Turkish Airlines</option>
-            <option value="Etihad Airways">Etihad Airways</option>
-            <option value="Air India">Air India</option>
-            <option value="Other">Other</option>
-          </select>
+            placeholder="e.g., Qatar Airways"
+          />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -510,11 +494,12 @@ function CompanionForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Phone (optional)
+          Phone *
         </label>
         <input
           type="tel"
           name="phone"
+          required
           value={formData.phone}
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
@@ -558,21 +543,15 @@ function CompanionForm() {
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Airline *
           </label>
-          <select
+          <input
+            type="text"
             name="airline"
             required
             value={formData.airline}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-white text-gray-900"
-          >
-            <option value="">Select airline</option>
-            <option value="Qatar Airways">Qatar Airways</option>
-            <option value="Emirates">Emirates</option>
-            <option value="Turkish Airlines">Turkish Airlines</option>
-            <option value="Etihad Airways">Etihad Airways</option>
-            <option value="Air India">Air India</option>
-            <option value="Other">Other</option>
-          </select>
+            placeholder="e.g., Qatar Airways"
+          />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -629,18 +608,26 @@ function CompanionForm() {
 
 interface PassengerRequest {
   id: string;
+  name: string;
+  email: string;
+  phone: string;
   from_location: string;
   to_location: string;
   airline: string;
   flight_date: string;
+  notes?: string;
 }
 
 interface CompanionSignup {
   id: string;
+  name: string;
+  email: string;
+  phone: string;
   from_location: string;
   to_location: string;
   airline: string;
   flight_date: string;
+  notes?: string;
 }
 
 function RecentRequests() {
@@ -694,6 +681,13 @@ function RecentRequests() {
     );
   }
 
+  function maskName(name: string) {
+    if (!name) return '';
+    const parts = name.trim().split(' ');
+    if (parts.length === 1) return '*';
+    return `* ${parts.slice(1).join(' ')}`;
+  }
+
   return (
     <div className="space-y-8">
       {/* Passenger Requests */}
@@ -706,23 +700,16 @@ function RecentRequests() {
           <div className="grid gap-3">
             {passengerRequests.slice(0, 5).map((request) => (
               <div key={request.id} className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="h-4 w-4 text-blue-600" />
-                    <span className="font-medium text-gray-900">
-                      {request.from_location} → {request.to_location}
-                    </span>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2">
+                    <span className="font-medium text-gray-900">Someone</span>
+                    <span className="flex items-center text-gray-600"><MapPin className="h-4 w-4 mr-1" />{request.from_location} → {request.to_location}</span>
+                    <span className="flex items-center text-gray-600"><Plane className="h-4 w-4 mr-1" />{request.airline}</span>
+                    <span className="flex items-center text-gray-600"><Calendar className="h-4 w-4 mr-1" />{formatDate(request.flight_date)}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Plane className="h-4 w-4 mr-1" />
-                      {request.airline}
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {formatDate(request.flight_date)}
-                    </div>
-                  </div>
+                  {request.notes && (
+                    <div className="text-xs text-gray-500 italic mt-1 md:mt-0">{request.notes}</div>
+                  )}
                 </div>
               </div>
             ))}
@@ -742,23 +729,16 @@ function RecentRequests() {
           <div className="grid gap-3">
             {companionSignups.slice(0, 5).map((signup) => (
               <div key={signup.id} className="bg-green-50 rounded-lg p-4 border border-green-200">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                    <span className="font-medium text-gray-900">
-                      {signup.from_location} → {signup.to_location}
-                    </span>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2">
+                    <span className="font-medium text-gray-900">Someone</span>
+                    <span className="flex items-center text-gray-600"><MapPin className="h-4 w-4 mr-1" />{signup.from_location} → {signup.to_location}</span>
+                    <span className="flex items-center text-gray-600"><Plane className="h-4 w-4 mr-1" />{signup.airline}</span>
+                    <span className="flex items-center text-gray-600"><Calendar className="h-4 w-4 mr-1" />{formatDate(signup.flight_date)}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Plane className="h-4 w-4 mr-1" />
-                      {signup.airline}
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {formatDate(signup.flight_date)}
-                    </div>
-                  </div>
+                  {signup.notes && (
+                    <div className="text-xs text-gray-500 italic mt-1 md:mt-0">{signup.notes}</div>
+                  )}
                 </div>
               </div>
             ))}
