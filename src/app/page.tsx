@@ -12,7 +12,12 @@ function AuthModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const handleGoogle = async () => {
     setError('');
     setLoading(true);
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/admin`
+      }
+    });
     if (error) setError(error.message);
     setLoading(false);
   };
